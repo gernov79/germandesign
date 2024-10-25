@@ -1,0 +1,473 @@
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 1rem=10px */
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 330px) {
+  body {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+/* header */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 0.1rem solid #bbb;
+  z-index: 999;
+}
+
+
+/* navbar bootstrap */
+
+.navbar {
+  /* border: 0; */
+  padding: 10px 0;
+  transition: all 1s esae-in-out;
+  background: #fff;
+}
+
+nav a {
+  color: #333!important;
+  /* font-size: 1em; */
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  margin: 0 20px;
+}
+
+@media only screen and (min-width: 992px) {
+  nav a {
+    margin: 0 40px
+  }
+}
+
+nav a:hover {
+  color: #00a5f2!important;
+  /* text-decoration: underline!important; */
+}
+
+.active a {
+  background: none!important;
+  color: #00a5f2!important;    
+  /* text-decoration: underline!important; */
+}
+
+.navbar-brand img {
+  height: 2.5em;
+  padding-bottom: 16px;
+}
+
+.navbar-toggle {
+  color: #999;
+  border-color: #999!important;
+  font-size: 20px;
+}
+
+.navbar-toggle:hover, 
+.navbar-toggle:focus {
+  color: #666!important;
+  border-color: #666!important;
+  background: none!important;
+}
+
+.navbar-collapse {
+  /* border-color: #A5CBC3!important; */
+  max-height: none!important;
+}
+
+/* previous navbar styles */
+/*
+#navbar ul {
+  width: 100%;
+  height: 6.7rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#navbar li > a {
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+}
+
+#navbar li > a:hover {
+  color: #999;
+  text-decoration: underline;
+}
+
+#navbar li > a[href="#curriculum"] span {
+  display: none;
+}
+
+#navbar li > a[href="#curriculum"]::after {
+  content: "C.V.";
+}
+
+@media only screen and (min-width: 330px) {
+  #navbar li > a {
+    font-size: 1.6rem;
+  }
+  #navbar li > a[href="#curriculum"]::after {
+    content: "Curriculum";
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  #navbar li > a {
+    font-size: 1.9rem;
+  }
+} */
+
+
+/* main doc - global styles */
+
+#main-doc {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 800;
+  color: #bbb;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: #777;
+  letter-spacing: 0.2rem;
+  padding: 2rem 0 1rem;
+}
+
+.bold {
+  font-weight: 800;
+  color: #444;
+}
+
+p {
+  line-height: 1.44;
+}
+
+#main-doc section {
+  padding-top: 9rem;
+}
+
+#main-doc section:last-of-type {
+  padding-bottom: 9rem;
+}
+
+@media only screen and (min-width: 875px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+/* portfolio section */
+
+#welcome-section {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content min-content min-content min-content auto;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#welcome-section #project-image {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+
+#welcome-section #logo {
+  display: none;
+}
+
+#welcome-section p:first-of-type {
+  text-align: center;
+  grid-area: 4 / 1 / span 1 / span 1;
+}
+
+#welcome-section p:first-of-type a {
+  color: #777;
+}
+
+#welcome-section p:first-of-type a:hover {
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+}
+
+#welcome-section .icons-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  width: 18rem;
+  margin: 0 auto;
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+
+#welcome-section p:last-of-type {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.icons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #999;
+  border-radius: 50%;
+}
+.icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+.icons:hover {
+  background-color: #555;
+}
+.icons a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 360px) {
+  #welcome-section #project-image {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  #welcome-section #project-image {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #welcome-section #project-image {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #welcome-section {
+    grid-template-columns: 22rem 40%;
+    grid-template-rows: auto min-content min-content auto;
+    column-gap: 10%;
+    row-gap: 2rem;
+  }
+  #welcome-section h1 {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+  #welcome-section #project-image {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  #welcome-section p:first-of-type {
+    grid-area: 3 / 1 / span 1 / span 1;
+  }
+  #welcome-section .icons-wrap {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+  #welcome-section p:last-of-type {
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-self: center;
+  }
+  #welcome-section #logo {
+    display: inline-block;
+    grid-area: 3 / 2 / span 1 / span 1;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 875px) {
+  #projects {
+    grid-template-columns: 23.3rem 23.3rem 23.3rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  #welcome-section p:last-of-type {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+  #welcome-section #logo {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+}
+
+/* curriculum section */
+
+#curriculum {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+#curriculum h1 {
+  padding-bottom: 1rem;
+}
+
+/* projects section */
+
+#projects {
+  display: grid;
+  grid-template-columns: 23.3rem;
+  grid-template-rows: min-content min-content min-content min-content min-content min-content;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-tile a {
+  text-decoration: none;
+}
+
+.project-tile a:hover img {
+  opacity: 0.8;
+}
+
+.project-tile p {
+  color: #000;
+  line-height: 1.2;
+  letter-spacing: 0.04rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  #projects {
+    grid-template-columns: 23.3rem 23.3rem;
+    column-gap: 5vw;
+  }
+
+  #projects h1 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (min-width: 875px) {
+  #projects {
+    grid-template-columns: 23.3rem 23.3rem 23.3rem;
+  }
+}
+
+.project-tile > p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.project-tile p > a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.project-tile p > a:hover {
+  color: #555;
+}
+
+
+/* footer section */
+
+footer {
+  /* background-color: #222; */
+  color: #fff;
+  padding: 4rem;
+  padding-top: 5rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("/img/bk.jpeg") center/cover no-repeat;
+}
+
+footer img {
+  height: 3em;
+  margin-bottom: 2em;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-top: 2rem;
+}
+
+footer li {
+  padding: 0.2rem;
+}
+
+footer li > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer li > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 300px) {
+  footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  footer {
+    font-size: 1.7rem;
+  }
+}
+
+/*** clients section ***/
+
+#clients {
+  background-color: #fff;
+}
+
+#clients p {
+  text-align: center;
+  line-height: 1.44;
+  padding: 1em 0 2em 0;
+}
+
+#clients .logos {
+  background-color: #fff;
+}
+
+#clients img {
+  width: auto;
+  margin: 0 auto; /* center the images horizontaly */
+}
+
