@@ -224,11 +224,11 @@ p {
 }
 
 #welcome-section p:first-of-type a {
-  color: #777;
+  color: #00a5f2;
 }
 
 #welcome-section p:first-of-type a:hover {
-  background-color: #555;
+  background-color: #00a5f2;
   color: #fff;
   text-decoration: none;
 }
@@ -262,7 +262,7 @@ p {
   font-size: 2rem;
 }
 .icons:hover {
-  background-color: #555;
+  background-color: #00a5f2;
 }
 .icons a:hover {
   text-decoration: none;
